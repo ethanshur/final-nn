@@ -7,6 +7,7 @@ name = "final-nn"
 version = "0.1.0"
 description = "Neural network final project"
 requires-python = ">=3.10"
+dependencies = ["numpy"]
 
 [tool.setuptools]
-packages = ["nn", "numpy"]
+packages = ["nn"]
