@@ -9,4 +9,4 @@ description = "Neural network final project"
 requires-python = ">=3.10"
 
 [tool.setuptools]
-packages = ["nn"]
+packages = ["nn", "numpy"]
