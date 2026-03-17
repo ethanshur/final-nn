@@ -141,6 +141,7 @@ class NeuralNetwork:
         cache = {"A0": X}
         A_curr = X
 
+        # Iterate through layers and call single_forward for each layer
         for idx, layer in enumerate(self.arch, start=1):
             W_curr = self._param_dict[f"W{idx}"]
             b_curr = self._param_dict[f"b{idx}"]
@@ -245,6 +246,7 @@ class NeuralNetwork:
         dA_curr = loss_backprop_map[self._loss_func](y, y_hat)
         grad_dict = {}
 
+        #Iterate through layers and call single_backprop on each layer.
         for layer_idx in reversed(range(1, len(self.arch) + 1)):
             W_curr = self._param_dict[f"W{layer_idx}"]
             b_curr = self._param_dict[f"b{layer_idx}"]
